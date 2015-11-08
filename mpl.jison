@@ -43,7 +43,7 @@ formula
   | formula '∧' formula
     { $$ = { conj: [$1, $3] }; }
   | '¬' formula
-    { $$ = { not: $2 }; }
+    { $$ = { neg: $2 }; }
   | '□' formula
     { $$ = { nec: $2 }; }
   | '◊' formula
